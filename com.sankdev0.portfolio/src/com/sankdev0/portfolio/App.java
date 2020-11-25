@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -26,11 +28,17 @@ public class App extends Application {
 		// 2. Construct primaryStage
 		primaryStage.setTitle(theGUIBundle.getString("appTitle"));
 
-		URL fxmlURL = getClass().getResource("main-layout.fxml");
-		FXMLLoader loader = new FXMLLoader(fxmlURL);
-
-		VBox primaryVBox = loader.<VBox>load();
-		Scene primaryScene = new Scene(primaryVBox, 800, 500);
+		// 2.1 load fmxl and css for GUI
+		URL fxmlURL = getClass().getResource("App.fxml");
+		System.out.println(">> Inside start method. Resolved FXML URL is "+fxmlURL);
+		FXMLLoader loader = new FXMLLoader(fxmlURL, theGUIBundle);
+		String stylesheet = getClass().getResource("App.css").toExternalForm();
+		System.out.println(">> Inside start method. Resolved CSS URL is "+stylesheet);
+		
+		// 2.2 Construct the root container and the primary scene
+		HBox primaryHBox = loader.<HBox>load();
+		Scene primaryScene = new Scene(primaryHBox, 800, 500);
+		primaryScene.getStylesheets().add(stylesheet);
 		primaryStage.setScene(primaryScene);
 
 		primaryStage.show();

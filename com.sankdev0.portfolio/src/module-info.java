@@ -3,5 +3,5 @@ module com.sankdev0.portfolio {
 	requires javafx.controls;
 	requires javafx.fxml;
 	
-	opens com.sankdev0.portfolio to javafx.graphics;
+	opens com.sankdev0.portfolio to javafx.graphics, javafx.fxml;
 }

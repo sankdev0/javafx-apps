@@ -10,7 +10,8 @@ public class GUIBundle_en_US extends ListResourceBundle {
 		return new Object[][] {
 				// LOCALIZE THIS
 				{ "appTitle", "Student works portfolio tracking" }, { "editWindowTitle", "Edit item" },
-				{ "okKey", "OK" }, { "cancelKey", "Cancel" }
+				{ "okKey", "OK" }, { "cancelKey", "Cancel" }, {"editButton","Edit"}, { "deleteButton", "Delete" },
+				{"addButton", "Create"}, {"saveButton", "Save"}, {"loadButton","Load"}
 				// END OF MATERIAL TO LOCALIZE
 		};
 	}

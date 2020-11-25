@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+	styleClass="h-box" fx:controller="com.sankdev0.portfolio.MainFXMLController" spacing="10">
+	<children>
+		<Button fx:id="editButton" text="%editButton">
+		</Button>
+		<Button fx:id="deleteButton" text="%deleteButton">
+		</Button>
+		<Button fx:id="addButton" text="%addButton">
+		</Button>
+		<Button fx:id="saveButton" text="%saveButton">
+		</Button>
+		<Button fx:id="loadButton" text="%loadButton">
+		</Button>
+	</children>
+</HBox>

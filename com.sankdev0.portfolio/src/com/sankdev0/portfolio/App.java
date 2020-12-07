@@ -25,7 +25,7 @@ public class App extends Application {
 		// 2. Construct primaryStage
 		primaryStage.setTitle(theGUIBundle.getString("appTitle"));
 
-		// 2.1 load fmxl and css for GUI
+		// 2.1 load fxml and css for GUI
 		URL fxmlURL = getClass().getResource("/res/fxml/App.fxml");
 		System.out.println(">> Inside start method. Resolved FXML URL is "+fxmlURL);
 		FXMLLoader loader = new FXMLLoader(fxmlURL, theGUIBundle);
@@ -33,7 +33,7 @@ public class App extends Application {
 		System.out.println(">> Inside start method. Resolved CSS URL is "+stylesheet);
 		
 		// 2.2 Construct the root container and the primary scene
-		HBox primaryHBox = loader.<HBox>load();
+		HBox primaryHBox = loader.load();
 		Scene primaryScene = new Scene(primaryHBox, 800, 500);
 		primaryScene.getStylesheets().add(stylesheet);
 		primaryStage.setScene(primaryScene);
@@ -56,7 +56,6 @@ public class App extends Application {
 
 	public static void main(String[] args) {
 		Application.launch(args);
-
 	}
 
 }

@@ -1,6 +1,5 @@
 package com.sankdev0.portfolio;
 
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;

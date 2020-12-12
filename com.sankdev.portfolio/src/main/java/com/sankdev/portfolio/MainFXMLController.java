@@ -1,4 +1,4 @@
-package com.sankdev0.portfolio;
+package com.sankdev.portfolio;
 
 import java.util.ResourceBundle;
 

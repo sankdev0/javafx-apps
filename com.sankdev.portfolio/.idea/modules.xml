@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/com.sankdev0.portfolio.iml" filepath="$PROJECT_DIR$/com.sankdev0.portfolio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.sankdev.portfolio.iml" filepath="$PROJECT_DIR$/com.sankdev.portfolio.iml" />
     </modules>
   </component>
 </project>

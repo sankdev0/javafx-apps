@@ -1,10 +1,10 @@
-package com.sankdev0.portfolio;
+package com.sankdev.portfolio;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.net.URL;
@@ -20,21 +20,21 @@ public class App extends Application {
 		Locale currentLocale = new Locale("ru", "RU");
 		// TODO remove
 		System.out.println(">> Inside start method. Chosen locale: " + currentLocale);
-		ResourceBundle theGUIBundle = ResourceBundle.getBundle("com.sankdev0.portfolio.GUIBundle", currentLocale);
+		ResourceBundle theGUIBundle = ResourceBundle.getBundle("com.sankdev.portfolio.GUIBundle", currentLocale);
 
 		// 2. Construct primaryStage
 		primaryStage.setTitle(theGUIBundle.getString("appTitle"));
 
 		// 2.1 load fxml and css for GUI
-		URL fxmlURL = getClass().getResource("/res/fxml/App.fxml");
+		URL fxmlURL = getClass().getResource("/fxml/App.fxml");
 		System.out.println(">> Inside start method. Resolved FXML URL is "+fxmlURL);
 		FXMLLoader loader = new FXMLLoader(fxmlURL, theGUIBundle);
-		String stylesheet = getClass().getResource("/res/css/App.css").toExternalForm();
+		String stylesheet = getClass().getResource("/css/App.css").toExternalForm();
 		System.out.println(">> Inside start method. Resolved CSS URL is "+stylesheet);
 		
 		// 2.2 Construct the root container and the primary scene
-		HBox primaryHBox = loader.load();
-		Scene primaryScene = new Scene(primaryHBox, 800, 500);
+		BorderPane primaryBorderPane = loader.load();
+		Scene primaryScene = new Scene(primaryBorderPane, 800, 500);
 		primaryScene.getStylesheets().add(stylesheet);
 		primaryStage.setScene(primaryScene);
 
@@ -50,7 +50,7 @@ public class App extends Application {
 		Scene editScene = new Scene(new Label ("stub label"), 600, 400);
 		editStage.setScene(editScene);
 
-		editStage.showAndWait();
+		//editStage.showAndWait();
 
 	}
 

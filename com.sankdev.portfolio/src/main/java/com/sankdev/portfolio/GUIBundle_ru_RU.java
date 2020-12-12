@@ -1,4 +1,4 @@
-package com.sankdev0.portfolio;
+package com.sankdev.portfolio;
 
 // Russian language
 public class GUIBundle_ru_RU extends GUIBundle {
